@@ -1,0 +1,124 @@
+body{
+    margin: 0;
+    width: 100vw;
+}
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+    grid-template-rows: 1fr 80% 1fr;
+    grid-template-areas: 
+      "header header header header"
+      ". main main ."
+      "footer footer footer footer";
+}
+.header{
+    grid-area: header;
+    background-color: lightblue;
+}
+.main-container{
+    grid-area: main;   
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+    grid-template-rows: auto;    
+}
+.footer{
+    grid-area: footer;   
+    background-color: blue;    
+}
+.media-content{
+    grid-column: 1;  
+    display: grid;    
+    grid-template-columns: auto;    
+    grid-template-rows: 20% 30% 30% 20%;
+    grid-template-areas: 
+    "."
+    "profile"
+    "additional"    
+    ".";    
+}
+.description-content{
+    grid-column: 2;   
+    display: grid;
+    grid-template-columns: auto;    
+    grid-template-rows: repeat(2, 25%) 5% 45%;
+    grid-row-gap: 10px;
+    grid-template-areas: 
+    "."
+    "name"
+    "title"
+    "about";    
+}
+.name{
+    grid-area: name;
+    align-self: end;
+    font-size: 26pt;
+    font-weight: 500;
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+}
+.title{
+    grid-area: title;
+    margin-left: 0.5em;
+    font-family: 'Lato', sans-serif;
+}
+.about{
+    grid-area: about;
+    font-family: 'Lato', sans-serif;
+}
+.profile-container{
+    grid-area: profile;   
+    position: absolute;
+    right: 52%;
+    top: 12%; 
+}
+.additional-container{
+    grid-area: additional;        
+    position: absolute;
+    right: 59.5%;
+    top: 40%;
+}
+
+.hexagon-1{
+    overflow: hidden;
+    visibility: hidden;
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    transform: rotate(120deg);
+    width: 200px;
+    height: 300px;
+}
+
+.hexagon-2 {
+    overflow: hidden;
+    /* width: 100%; */
+    height: 100%;
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+.hexagon-3 {
+    /* width: 100%; */
+    height: 100%;
+    /* background-repeat: no-repeat; */
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+
+.profile-image{
+    background-image: url(images/test-image.jpg);
+    background-position: 28% 35%;
+    visibility: visible;
+}
+
+.placeholder-hex{
+    background-color: green;
+    visibility: visible;
+}
