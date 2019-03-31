@@ -1,9 +1,11 @@
 body{
     margin: 0;
+    padding: 0;
     width: 100vw;
 }
 .container{
     height: 100vh;
+    min-height: 735px;
     display: grid;
     grid-template-columns: 10% 40% 40% 10%;
     grid-template-rows: 1fr 80% 1fr;
@@ -14,7 +16,7 @@ body{
 }
 .header{
     grid-area: header;
-    background-color: lightblue;
+    /* background-color: lightblue; */
 }
 .main-container{
     grid-area: main;   
@@ -24,22 +26,21 @@ body{
 }
 .footer{
     grid-area: footer;   
-    background-color: blue;    
+    /* background-color: blue; */    
 }
 .media-content{
     grid-column: 1;  
     display: grid;    
-    grid-template-columns: auto;    
-    grid-template-rows: 60% 0;
+    grid-template-columns: 80% 102px;    
+    grid-template-rows: 660px;
     grid-template-areas: 
-    "profile"
-    "additional";    
+    "additional profile";    
 }
 .description-content{
     grid-column: 2;   
     display: grid;
     grid-template-columns: auto;    
-    grid-template-rows: repeat(2, 30%) 5% 30%;
+    grid-template-rows: repeat(2, 25%) 5% 30%;
     grid-row-gap: 10px;
     grid-template-areas: 
     "."
@@ -67,16 +68,14 @@ body{
 .profile-container{
     grid-area: profile;   
     place-self: end;
-/*     position: absolute;
-    right: 52%;
-    top: 12%;  */
+    align-self: start;
+    padding-top: 55px;
 }
 .additional-container{
     grid-area: additional; 
     place-self: end;    
-    position: relative;
-    top: 11em;
-    right: 6.5em;
+    align-self: center;
+    padding-top: 110px;
 }
 
 .hexagon-1{
