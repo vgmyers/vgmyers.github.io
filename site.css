@@ -7,6 +7,7 @@ body{
 .container{
     height: 100vh;
     min-height: 735px;
+    display: -ms-grid;
     display: grid;
     grid-template-columns: 10% 40% 40% 10%;
     grid-template-rows: 1fr 80% 1fr;
@@ -20,7 +21,8 @@ body{
     /* background-color: lightblue; */
 }
 .main-container{
-    grid-area: main;   
+    grid-area: main;  
+    display: -ms-grid; 
     display: grid;
     grid-template-columns: 1fr 1fr;    
     grid-template-rows: auto;    
@@ -31,6 +33,7 @@ body{
 }
 .media-content{
     grid-column: 1;  
+    display: -ms-grid;
     display: grid;    
     grid-template-columns: 80% 102px;    
     grid-template-rows: 660px;
@@ -39,6 +42,7 @@ body{
 }
 .description-content{
     grid-column: 2;   
+    display: -ms-grid;
     display: grid;
     grid-template-columns: auto;    
     grid-template-rows: repeat(2, 25%) 5% 30%;
